@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClínicaMed — Sistema de Citas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-brand">🏥 ClínicaMed</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+            <a href="#" onclick="mostrarSeccion('login')" id="btnLogin">Iniciar Sesión</a>
+            <a href="#" onclick="mostrarSeccion('registro')" id="btnRegistro">Registrarse</a>
+            <a href="#" onclick="cerrarSesion()" id="btnCerrar" style="display:none">Cerrar Sesión</a>
+        </div>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="seccion-inicio" class="seccion activa">
+        <div class="hero">
+            <h1>Tu salud, nuestra prioridad</h1>
+            <p>Reserva tu cita médica de forma rápida, segura y sin esperas</p>
+            <button class="btn-primary" style="width:auto;padding:0.8rem 2rem;" onclick="mostrarSeccion('registro')">
+                Reservar cita ahora
+            </button>
+        </div>
+        <p class="servicios-label">Nuestras especialidades</p>
+        <div class="servicios-preview" id="serviciosPreview"></div>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="seccion-login" class="seccion">
+        <div class="form-container">
+            <h2>🔐 Iniciar Sesión</h2>
+            <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-bottom:1.5rem;">
+                Accede a tus citas médicas
+            </p>
+            <div id="loginError" class="mensaje error" style="display:none"></div>
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" id="loginEmail" placeholder="paciente@email.com">
+                <span class="error-campo" id="errorLoginEmail"></span>
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="loginPassword" placeholder="••••••">
+                <span class="error-campo" id="errorLoginPassword"></span>
+            </div>
+            <button class="btn-primary" onclick="login()">Ingresar</button>
+            <p class="form-footer">¿No tienes cuenta?
+                <a href="#" onclick="mostrarSeccion('registro')">Regístrate gratis</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- REGISTRO -->
+    <section id="seccion-registro" class="seccion">
+        <div class="form-container">
+            <h2>📋 Crear Cuenta</h2>
+            <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-bottom:1.5rem;">
+                Regístrate para gestionar tus citas
+            </p>
+            <div id="registroMsg" class="mensaje" style="display:none"></div>
+            <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" id="regNombre" placeholder="Ej: Juan Pérez">
+                <span class="error-campo" id="errorRegNombre"></span>
+            </div>
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" id="regEmail" placeholder="tu@email.com">
+                <span class="error-campo" id="errorRegEmail"></span>
+            </div>
+            <div class="form-group">
+                <label>DNI</label>
+                <input type="text" id="regDni" placeholder="12345678" maxlength="8">
+                <span class="error-campo" id="errorRegDni"></span>
+            </div>
+            <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" id="regTelefono" placeholder="987654321">
+                <span class="error-campo" id="errorRegTelefono"></span>
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres con un número">
+                <span class="error-campo" id="errorRegPassword"></span>
+            </div>
+            <button class="btn-primary" onclick="registrar()">Crear cuenta</button>
+            <p class="form-footer">¿Ya tienes cuenta?
+                <a href="#" onclick="mostrarSeccion('login')">Inicia sesión</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="seccion-dashboard" class="seccion">
+        <div class="dashboard">
+            <h2>Bienvenido, <span id="nombreUsuario"></span> 👋</h2>
+            <div class="tabs">
+                <button class="tab activa" onclick="mostrarTab('nuevaCita', this)">
+                    🗓 Nueva Cita
+                </button>
+                <button class="tab" onclick="mostrarTab('misCitas', this)">
+                    📋 Mis Citas
+                </button>
+                <button class="tab" onclick="mostrarTab('miPerfil', this)">
+                    👤 Mi Perfil
+                </button>
+            </div>
+
+            <!-- Nueva Cita -->
+            <div id="tab-nuevaCita" class="tab-content activa">
+                <h3 style="color:var(--text);margin-bottom:1.2rem;">Reservar nueva cita</h3>
+                <div id="citaMsg" class="mensaje" style="display:none"></div>
+                <div class="form-group">
+                    <label>Especialidad médica</label>
+                    <select id="especialidadSelect">
+                        <option value="">Cargando especialidades...</option>
+                    </select>
+                    <span class="error-campo" id="errorEspecialidad"></span>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de la cita</label>
+                    <input type="date" id="citaFecha">
+                    <span class="error-campo" id="errorFecha"></span>
+                </div>
+                <div class="form-group">
+                    <label>Hora de la cita</label>
+                    <input type="time" id="citaHora" min="08:00" max="20:00">
+                    <span class="error-campo" id="errorHora"></span>
+                </div>
+                <div class="form-group">
+                    <label>Motivo de consulta</label>
+                    <textarea id="citaMotivo" placeholder="Describa brevemente su motivo de consulta..."></textarea>
+                </div>
+                <button class="btn-primary" onclick="crearCita()">Confirmar cita médica</button>
+            </div>
+
+            <!-- Mis Citas -->
+            <div id="tab-misCitas" class="tab-content">
+                <h3 style="color:var(--text);margin-bottom:1.2rem;">Historial de citas</h3>
+                <div id="listaCitas"></div>
+            </div>
+
+            <!-- Mi Perfil -->
+            <div id="tab-miPerfil" class="tab-content">
+                <h3 style="color:var(--text);margin-bottom:1.2rem;">Mi información</h3>
+                <div id="infoPerfil"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
