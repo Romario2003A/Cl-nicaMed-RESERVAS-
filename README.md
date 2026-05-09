@@ -11,7 +11,6 @@
 
 ## 📋 Tabla de Contenidos
 
-<<<<<<< HEAD
 
 - [Descripción](#-descripción)
 - [Tecnologías](#-tecnologías)
@@ -26,13 +25,6 @@
   | Romario   | Frontend & CSS          |
   | David     | Seguridad & Middleware  |
   | Paolo     | Documentación & Testing |
-  | ------    | ---                     |
-  | Daniel    | Backend & Base de Datos |
-  | Romario 2 | Frontend & CSS          |
-  | David 3   | Seguridad & Middleware  |
-  | Paolo 4   | Documentación & Testing |
-
----
 
 ## 📌 Descripción
 
