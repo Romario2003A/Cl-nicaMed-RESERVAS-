@@ -138,33 +138,34 @@ async function registrar() {                        //Puede espera respuestas si
     }
 }             
 
-// ===== LOGIN =====
+// ===== LOGIN ===== validar datos → enviar al servidor → verificar respuesta → entrar al sistema.
+
 async function login() {
-    if (!validarLoginCliente()) return;
+    if (!validarLoginCliente()) return;     //validar que los datos existan y sean correctos 
 
     const datos = {
         email:    document.getElementById('loginEmail').value.trim(),
         password: document.getElementById('loginPassword').value
-    };
+    };  //aca se guardan los datos 
 
     try {
-        const res  = await fetch('/api/usuarios/login', {
+        const res  = await fetch('/api/usuarios/login', {           //peticion pra verificar credenciales
             method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(datos)
+            headers: { 'Content-Type': 'application/json' },            //viajan-> json
+            body:    JSON.stringify(datos)                               //convertimos a json   
         });
-        const data = await res.json();
+        const data = await res.json();          //recibe la respuesta del servidor y la convierte a json
 
-        if (!res.ok) {
+        if (!res.ok) {                          //si no hubo respuesta
             mostrarMensaje('loginError', data.error || 'Credenciales incorrectas', 'error');
             return;
         }
 
-        usuarioActual = data.usuario;
-        actualizarNavbar();
-        document.getElementById('nombreUsuario').textContent = usuarioActual.nombre.split(' ')[0];
-        mostrarSeccion('dashboard');
-        cargarEspecialidades();
+        usuarioActual = data.usuario;                   //guardamos datos del usuario  
+        actualizarNavbar();                             
+        document.getElementById('nombreUsuario').textContent = usuarioActual.nombre.split(' ')[0]; //primer nombre 
+        mostrarSeccion('dashboard');                      //dashboard
+        cargarEspecialidades();                          //especialidades
 
     } catch (err) {
         mostrarMensaje('loginError', 'Error de conexión con el servidor', 'error');
