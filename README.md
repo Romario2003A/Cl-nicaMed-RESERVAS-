@@ -9,10 +9,10 @@ Sistema web seguro para la gestión de citas médicas, desarrollado como proyect
 | Nombre | Rol |
 |--------|-----|
 <<<<<<< HEAD
-| Romario | Backend & Base de Datos |
-| Integrante 2 | Frontend & CSS |
-| Integrante 3 | Seguridad & Middleware |
-| Integrante 4 | Documentación & Testing |
+| Daniel | Backend & Base de Datos |
+| Romario  | Frontend & CSS |
+| David  | Seguridad & Middleware |
+| Paolo  | Documentación & Testing |
 =======
 | Daniel | Backend & Base de Datos |
 | Romario 2 | Frontend & CSS |
