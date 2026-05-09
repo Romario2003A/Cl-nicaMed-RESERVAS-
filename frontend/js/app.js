@@ -106,37 +106,37 @@ function validarLoginCliente() {
 }
 
 // ===== REGISTRO =====
-async function registrar() {
-    if (!validarRegistroCliente()) return;
-
+async function registrar() {                        //Puede espera respuestas sin bloquear la pagina    va a waiting la respuestas
+    if (!validarRegistroCliente()) return;    //creamos la condicion pra la verificacion de datos pra el usuario 
+//valida que los datos esten correctos 
     const datos = {
         nombre:   document.getElementById('regNombre').value.trim(),
         email:    document.getElementById('regEmail').value.trim(),
         dni:      document.getElementById('regDni').value.trim(),
         telefono: document.getElementById('regTelefono').value.trim(),
         password: document.getElementById('regPassword').value
-    };
+    };              //captura los datos y usamos el value que es para obtner lo q escribio el usuario y 
 
     try {
-        const res  = await fetch('/api/usuarios/registrar', {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(datos)
+        const res  = await fetch('/api/usuarios/registrar', {   //envia los datos al backend 
+            method:  'POST',         //indica que es una peticion post pra enviar datos
+            headers: { 'Content-Type': 'application/json' },        //le indica al servidor q los datos vienen en formato json
+            body:    JSON.stringify(datos)          //convierte los datos a json pra enviar al servidor 
         });
-        const data = await res.json();
+        const data = await res.json();  //recibe la respuesta del servidor y la convierte a json
 
-        if (!res.ok) {
-            mostrarMensaje('registroMsg', data.error || 'Error al registrar', 'error');
+        if (!res.ok) {      //si no hubo respuesta   
+            mostrarMensaje('registroMsg', data.error || 'Error al registrar', 'error'); 
             return;
         }
 
         mostrarMensaje('registroMsg', '✅ ¡Cuenta creada! Ahora inicia sesión.', 'exito');
-        setTimeout(() => mostrarSeccion('login'), 2000);
-
-    } catch (err) {
-        mostrarMensaje('registroMsg', 'Error de conexión con el servidor', 'error');
+        setTimeout(() => mostrarSeccion('login'), 2000); //espera 2 segundos y muestra la seccion de login 
+  
+    } catch (err) {         //MANEJO DE ERRORES- SI NO HAY INTERNET->
+        mostrarMensaje('registroMsg', 'Error de conexión con el servidor', 'error'); 
     }
-}
+}             
 
 // ===== LOGIN =====
 async function login() {
