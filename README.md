@@ -8,10 +8,17 @@ Sistema web seguro para la gestión de citas médicas, desarrollado como proyect
 
 | Nombre | Rol |
 |--------|-----|
+<<<<<<< HEAD
 | Romario | Backend & Base de Datos |
 | Integrante 2 | Frontend & CSS |
 | Integrante 3 | Seguridad & Middleware |
 | Integrante 4 | Documentación & Testing |
+=======
+| Daniel | Backend & Base de Datos |
+| Romario 2 | Frontend & CSS |
+| David  3 | Seguridad & Middleware |
+| Paolo 4 | Documentación & Testing |
+>>>>>>> 1fe38186ac011e214831b5fce26f21fa02881468
 
 ---
 
@@ -25,39 +32,7 @@ Sistema web seguro para la gestión de citas médicas, desarrollado como proyect
 | Seguridad | bcrypt, express-validator, dotenv |
 | Arquitectura | MVC (Modelo - Vista - Controlador) |
 
----
 
-## 📁 Estructura del proyecto
-
-sistema-reservas/
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   │   └── database.js        # Conexión MySQL (Singleton)
-│   │   ├── controllers/
-│   │   │   ├── usuario.controller.js
-│   │   │   └── reserva.controller.js
-│   │   ├── middlewares/
-│   │   │   └── validacion.middleware.js  # Sanitización XSS/SQLi
-│   │   ├── models/
-│   │   │   ├── Usuario.js         # POO + bcrypt
-│   │   │   ├── Reserva.js
-│   │   │   └── Servicio.js
-│   │   └── routes/
-│   │       ├── usuario.routes.js
-│   │       └── reserva.routes.js
-│   ├── .env                       # Variables de entorno (no subir)
-│   ├── package.json
-│   └── server.js
-└── frontend/
-├── css/
-│   └── styles.css
-├── js/
-│   └── app.js
-└── index.html
-
-
----
 
 ## ⚙️ Requisitos previos
 
@@ -155,4 +130,7 @@ npm install
 node server.js
 ```
 
+
  6. Abrir en el navegador
+
+
