@@ -226,10 +226,10 @@ created_at                              created_at
 
 | Nombre | Usuario GitHub | Rol |
 |--------|---------------|-----|
-| Romario | [@Romario2003A](https://github.com/Romario2003A) | Backend & Base de Datos |
-| Integrante 2 | — | Frontend & CSS |
-| Integrante 3 | — | Seguridad & Middleware |
-| Jorge Daniel | [@JoosX](https://github.com/JoosX) | Documentación & Testing |
+| Daniel | [@JoosX](https://github.com/JoosX) | Backend & Base de Datos |
+| Romario | [@Devoldt1998](https://github.com/Devoldt1998) | Frontend & CSS |
+| David | [@METAGROSSP](https://github.com/METAGROSSP) | Seguridad & Middleware |
+| Paolo | — | Documentación & Testing |
 
 ---
 
