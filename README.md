@@ -32,39 +32,7 @@ Sistema web seguro para la gestión de citas médicas, desarrollado como proyect
 | Seguridad | bcrypt, express-validator, dotenv |
 | Arquitectura | MVC (Modelo - Vista - Controlador) |
 
----
 
-## 📁 Estructura del proyecto
-
-sistema-reservas/
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   │   └── database.js        # Conexión MySQL (Singleton)
-│   │   ├── controllers/
-│   │   │   ├── usuario.controller.js
-│   │   │   └── reserva.controller.js
-│   │   ├── middlewares/
-│   │   │   └── validacion.middleware.js  # Sanitización XSS/SQLi
-│   │   ├── models/
-│   │   │   ├── Usuario.js         # POO + bcrypt
-│   │   │   ├── Reserva.js
-│   │   │   └── Servicio.js
-│   │   └── routes/
-│   │       ├── usuario.routes.js
-│   │       └── reserva.routes.js
-│   ├── .env                       # Variables de entorno (no subir)
-│   ├── package.json
-│   └── server.js
-└── frontend/
-├── css/
-│   └── styles.css
-├── js/
-│   └── app.js
-└── index.html
-
-
----
 
 ## ⚙️ Requisitos previos
 
