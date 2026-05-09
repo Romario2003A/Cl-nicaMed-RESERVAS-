@@ -20,20 +20,17 @@
 - [Base de Datos](#-base-de-datos)
 - [Uso](#-uso)
 - # [Equipo](#-equipo-de-desarrollo)
-  | Nombre | Rol |
-  | ------ | --- |
-  <<<<<<< HEAD
-  | Daniel | Backend & Base de Datos |
-  | Romario | Frontend & CSS |
-  | David | Seguridad & Middleware |
-  | Paolo | Documentación & Testing |
-  =======
-  | Daniel | Backend & Base de Datos |
-  | Romario 2 | Frontend & CSS |
-  | David 3 | Seguridad & Middleware |
-  | Paolo 4 | Documentación & Testing |
-  > > > > > > > 1fe38186ac011e214831b5fce26f21fa02881468
-  > > > > > > > 2fcd4e453eeeed480a6f6e4bee2d9a3e10dfcfa3
+  | Nombre    | Rol                     |
+  | --------- | ----------------------- |
+  | Daniel    | Backend & Base de Datos |
+  | Romario   | Frontend & CSS          |
+  | David     | Seguridad & Middleware  |
+  | Paolo     | Documentación & Testing |
+  | ------    | ---                     |
+  | Daniel    | Backend & Base de Datos |
+  | Romario 2 | Frontend & CSS          |
+  | David 3   | Seguridad & Middleware  |
+  | Paolo 4   | Documentación & Testing |
 
 ---
 
@@ -241,7 +238,7 @@ created_at                              created_at
 ## 👥 Equipo de Desarrollo
 
 | Nombre  | Usuario GitHub                                   | Rol                     |
-|---------|--------------------------------------------------|-------------------------|
+| ------- | ------------------------------------------------ | ----------------------- |
 | Daniel  | [@JoosX](https://github.com/JoosX)               | Backend & Base de Datos |
 | Romario | [@Romario2003A](https://github.com/Romario2003A) | Frontend & CSS          |
 | David   | [@METAGROSSP](https://github.com/METAGROSSP)     | Seguridad & Middleware  |
