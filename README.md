@@ -8,10 +8,17 @@ Sistema web seguro para la gestión de citas médicas, desarrollado como proyect
 
 | Nombre | Rol |
 |--------|-----|
+<<<<<<< HEAD
 | Romario | Backend & Base de Datos |
 | Integrante 2 | Frontend & CSS |
 | Integrante 3 | Seguridad & Middleware |
 | Integrante 4 | Documentación & Testing |
+=======
+| Daniel | Backend & Base de Datos |
+| Romario 2 | Frontend & CSS |
+| David  3 | Seguridad & Middleware |
+| Paolo 4 | Documentación & Testing |
+>>>>>>> 1fe38186ac011e214831b5fce26f21fa02881468
 
 ---
 
@@ -155,4 +162,7 @@ npm install
 node server.js
 ```
 
+
  6. Abrir en el navegador
+
+
