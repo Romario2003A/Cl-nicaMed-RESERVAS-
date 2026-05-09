@@ -11,13 +11,29 @@
 
 ## 📋 Tabla de Contenidos
 
+<<<<<<< HEAD
+
 - [Descripción](#-descripción)
 - [Tecnologías](#-tecnologías)
 - [Arquitectura](#-arquitectura-del-proyecto)
 - [Instalación](#-instalación-y-configuración)
 - [Base de Datos](#-base-de-datos)
 - [Uso](#-uso)
-- [Equipo](#-equipo-de-desarrollo)
+- # [Equipo](#-equipo-de-desarrollo)
+  | Nombre | Rol |
+  | ------ | --- |
+  <<<<<<< HEAD
+  | Daniel | Backend & Base de Datos |
+  | Romario | Frontend & CSS |
+  | David | Seguridad & Middleware |
+  | Paolo | Documentación & Testing |
+  =======
+  | Daniel | Backend & Base de Datos |
+  | Romario 2 | Frontend & CSS |
+  | David 3 | Seguridad & Middleware |
+  | Paolo 4 | Documentación & Testing |
+  > > > > > > > 1fe38186ac011e214831b5fce26f21fa02881468
+  > > > > > > > 2fcd4e453eeeed480a6f6e4bee2d9a3e10dfcfa3
 
 ---
 
@@ -39,13 +55,13 @@
 
 ## 🛠 Tecnologías
 
-| Capa | Tecnología | Versión |
-|------|-----------|---------|
-| **Frontend** | HTML5, CSS3, JavaScript (Vanilla) | — |
-| **Backend** | Node.js + Express.js | v18+ |
-| **Base de Datos** | MySQL | 8.0 |
-| **Seguridad** | bcrypt, express-validator, dotenv | — |
-| **Arquitectura** | MVC (Modelo - Vista - Controlador) | — |
+| Capa              | Tecnología                         | Versión |
+| ----------------- | ---------------------------------- | ------- |
+| **Frontend**      | HTML5, CSS3, JavaScript (Vanilla)  | —       |
+| **Backend**       | Node.js + Express.js               | v18+    |
+| **Base de Datos** | MySQL                              | 8.0     |
+| **Seguridad**     | bcrypt, express-validator, dotenv  | —       |
+| **Arquitectura**  | MVC (Modelo - Vista - Controlador) | —       |
 
 ---
 
@@ -224,12 +240,12 @@ created_at                              created_at
 
 ## 👥 Equipo de Desarrollo
 
-| Nombre | Usuario GitHub | Rol |
-|--------|---------------|-----|
-| Daniel | [@JoosX](https://github.com/JoosX) | Backend & Base de Datos |
-| Romario | [@Romario2003A](https://github.com/Romario2003A) | Frontend & CSS |
-| David | [@METAGROSSP](https://github.com/METAGROSSP) | Seguridad & Middleware |
-| Paolo | [@Devoldt1998](https://github.com/Devoldt1998) | Documentación & Testing |
+| Nombre  | Usuario GitHub                                   | Rol                     |
+|---------|--------------------------------------------------|-------------------------|
+| Daniel  | [@JoosX](https://github.com/JoosX)               | Backend & Base de Datos |
+| Romario | [@Romario2003A](https://github.com/Romario2003A) | Frontend & CSS          |
+| David   | [@METAGROSSP](https://github.com/METAGROSSP)     | Seguridad & Middleware  |
+| Paolo   | [@Devoldt1998](https://github.com/Devoldt1998)   | Documentación & Testing |
 
 ---
 
